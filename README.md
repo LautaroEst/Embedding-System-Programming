@@ -16,3 +16,12 @@ El enviroment se compone de:
 * Debugging (gdb)
 
 La IDE junta todas esas herramientas en un solo programa.
+
+
+Platform components:
+
+* Host Machine
+* Development Enviroments
+* Compiler Toolchain
+* Development Kids
+* Version Control
