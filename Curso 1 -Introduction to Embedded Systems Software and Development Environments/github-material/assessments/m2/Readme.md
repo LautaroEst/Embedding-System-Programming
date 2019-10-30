@@ -1,16 +1,18 @@
+# Assignment 2
+
 In this programming assignment you will create a build system using the GNU tools, GCC and GNU Make. This assignment will require you to compile multiple files, link them together and create a final output executable. Some files will be provided for you, but you will need to support two platforms; the host environment and the target embedded system MSP432. The host system will allow you to simulate software on a host platform. The target system will be used in upcoming assignments as we begin to create our microcontroller applications.
 
 After completing this assignment, you will be able to:
 
-    Use GCC and GNU Make to create a command line build system
-    Write a makefile that can natively and cross compile an application
-    Generate preprocessor, assembly, object, dependency, executable, and map output files
+* Use GCC and GNU Make to create a command line build system
+* Write a makefile that can natively and cross compile an application
+* Generate preprocessor, assembly, object, dependency, executable, and map output files
 
 It is highly recommended that you review the implementation of module 2 demo files provided in the github repository found at this link as they are highly relevant to this assignment:
 
 https://github.com/afosdick/ese-coursera-course1/tree/master/demos/m2
 
-Environment Setup
+## Environment Setup
 
 For this course you will be using a Ubuntu Linux Virtual Machine. In order to run this machine, you will need to download Oracle’s VirtualBox software and the VM.
 
@@ -46,7 +48,7 @@ In the assessments/c2 folder you will see 2 directories and a file.
 
 Inside the common folder, you have been provided a memory.h and a platform.h file. The platform.h file gives you an interface to printf using the macro PRINTF as a mechanism to reduce the dependencies on the stdio.h library.
 
-Platforms and Flag Support Guidelines
+## Platforms and Flag Support Guidelines
 
 You need to support two target platforms and their own specific compilers. These two platforms are the HOST and the MSP432. The host embedded system will use the native compiler, gcc. The target embedded system will use the cross compiler, arm-none-eabi-gcc. The PLATFORM keyword provided in the Makefile should be used to conditionally assign the appropriate compiler flags, linker flags, and architecture flags. The target platform must be provided at the command line with the make command to set the platform you are compiling for.
 
@@ -112,7 +114,7 @@ You may NOT use wildcard searches for finding source files. You must directly de
 	endif
 ```
 
-Build Target Guidelines
+## Build Target Guidelines
 
 You need to support a number of build rules and target files. Any rule with a prerequisite list must have only dependent files and dependent targets listed. For any prerequisite that is in another build target prerequisite list, that target dependency needs to execute those rules before running the initially provided target. Finally, you do NOT need to go from source file to preprocessor file to assembly file to object file to relocatable file to executable file for this build. You can have build rules that directly compile a file.
 

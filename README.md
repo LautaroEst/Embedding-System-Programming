@@ -25,3 +25,16 @@ Platform components:
 * Compiler Toolchain
 * Development Kids
 * Version Control
+
+
+# 30-10-2019
+
+Hoy empecé a ver el curso de Miro Samek con más detalle y me di cuenta de algunas cosas que paso a describir...
+
+Para programar sistemas embebidos se trabaja primero en una placa placa de desarrollo como la EDU-CIAA o el Arduino UNO o lo que fuera. Ahí se desarrolla el código, los periféricos, se hacen pruebas, etc. hasta tener el sistema más o menos andando. Después, se hace un diseño más en serio hasta tener un prototipo comercial (o con los requerimientos que fueran). Básicamente, lo que se hace en sistemas embebidos es hacer el código del sistema digital fabricado (es decir, se programa el micro). Este proceso, en la práctica, consiste de varias instancias:
+* Escribir el código en un lenguaje de alto nivel, usando un editor de texto.
+* Compilar el código con algún compilador + organizador de instrucciones (GNU Make)
+* Simular y/o debuggear el código compilado. Esto implica revisar instrucción por instrucción el código de bajo nivel y ver que ande todo como yo quiero.
+La forma moderna de aprender a crear código para sistemas embebidos consiste en repetir este ciclo con programas cada vez más complejos. 
+
+Estaría bueno seguir los ejemplos del curso de Samek, pero él usa el IAR. Por eso, primero voy a seguir haciendo el curso de Coursera (particularmente, el módulo 2 en el que practicás usar Make y las herramientas en las que no necesitás usar el IDE). 
