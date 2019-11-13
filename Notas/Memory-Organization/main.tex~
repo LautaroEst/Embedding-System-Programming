@@ -1,0 +1,9 @@
+\documentclass[a4 paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+
+Hola mundo!
+
+\end{document}

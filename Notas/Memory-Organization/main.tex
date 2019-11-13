@@ -1,0 +1,28 @@
+\documentclass[a4 paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+
+El objetivo de estas notas es explicar los conceptos fundamentales de arquitectura de microcontroladores y organización de memoria para programar en C. Esto es necesario en los sistemas embebidos porque los recursos suelen ser escasos, y tener una buena representación de la memoria disponible ayuda a optimizar estos recursos.
+
+\section{Arquitectura de Microcontroladores}
+
+Recordemos el funcionamiento básico de los microcontroladores observando el diagrama en bloques básico de un microcontrolador, mostrado en la figura \ref{fig:arq_mic}.
+
+\begin{figure}[h!]
+  \centering
+  \label{fig:arq_mic}
+  \caption{Estructura interna básica de un microcontrolador}
+\end{figure}
+
+En el bloque ``Code Memory'' (memoria del programa) están almacenadas las instrucciones que ejecuta el microcontrolador desde el momento en que se resetea.
+
+* La CPU es la unidad que realiza las instrucciones del programa. Todas las otras unidades (periféricos, memorias, etc.) se comunican con la CPU.
+* Las instrucciones que realiza el CPU se guardan en la memoria de programa (Code Memory).
+* Muchas instrucciones implican guardar datos temporales, los cuales se hacen en la Memoria de Datos.
+* Tanto la CPU como otros bloques funcionales contienen almacenadores de memoria rápida llamados registros, optimizados según su ubicación.
+
+CUANDO UNO HACE UN PROGRAMA, LO HACE PARA EL PROCESADOR! En el linker se hace una descripción de la memoria y del microcontrolador en particular pero el programa (es decir, el algoritmo y la función main) se hace para el procesador, no para el micro.
+
+\end{document}
